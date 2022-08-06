@@ -38,3 +38,18 @@ country_event = {
 		update_tracker = { RES = consumer_goods }
 	}
 }
+# saves yearly res production
+country_event = {
+
+	id = tracker.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		yearly_total = { RES = energy }
+		yearly_total = { RES = minerals }
+		yearly_total = { RES = food }
+		yearly_total = { RES = alloys }
+		yearly_total = { RES = consumer_goods }
+	}
+}
