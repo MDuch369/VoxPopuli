@@ -16,19 +16,12 @@ country_event = {
 
 	immediate = {
 		set_tracker = { RES = energy }
-	}
-	immediate = {
 		set_tracker = { RES = minerals }
-	}
-	immediate = {
 		set_tracker = { RES = food }
-	}
-	immediate = {
 		set_tracker = { RES = alloys }
-	}
-	immediate = {
 		set_tracker = { RES = consumer_goods }
-	}				
+	}
+			
 }  
 # updates trackers every month
 country_event = {
@@ -39,17 +32,9 @@ country_event = {
 
 	immediate = {
 		update_tracker = { RES = energy }
-	}
-	immediate = {
 		update_tracker = { RES = minerals }
-	}
-	immediate = {
 		update_tracker = { RES = food }
-	}
-	immediate = {
 		update_tracker = { RES = alloys }
-	}
-	immediate = {
 		update_tracker = { RES = consumer_goods }
-	}				
+	}
 }
