@@ -1,55 +1,55 @@
-##########################
+################################
 #
 # Economy tracker events
 # Mateusz Duchnowski
 #
-##########################
+################################
 
 namespace = tracker
 
 # creates tracker variables
 country_event = {
-
 	id = tracker.1
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-		set_tracker = { RES = energy }
-		set_tracker = { RES = minerals }
-		set_tracker = { RES = food }
-		set_tracker = { RES = alloys }
-		set_tracker = { RES = consumer_goods }
+		ROOT = {
+			set_tracker = { RES = energy }
+			set_tracker = { RES = minerals }
+			set_tracker = { RES = food }
+			set_tracker = { RES = alloys }
+			set_tracker = { RES = consumer_goods }
+		}
 	}
-			
 }  
 # updates trackers every month
 country_event = {
-
 	id = tracker.2
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-		update_tracker = { RES = energy }
-		update_tracker = { RES = minerals }
-		update_tracker = { RES = food }
-		update_tracker = { RES = alloys }
-		update_tracker = { RES = consumer_goods }
+		ROOT = {
+			update_tracker = { RES = energy }
+			update_tracker = { RES = minerals }
+			update_tracker = { RES = food }
+			update_tracker = { RES = alloys }
+			update_tracker = { RES = consumer_goods }
+		}
 	}
 }
 # saves yearly res production
-country_event = {
+# country_event = {
+# 	id = tracker.3
+# 	hide_window = yes
+# 	is_triggered_only = yes
 
-	id = tracker.3
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		yearly_total = { RES = energy }
-		yearly_total = { RES = minerals }
-		yearly_total = { RES = food }
-		yearly_total = { RES = alloys }
-		yearly_total = { RES = consumer_goods }
-	}
-}
+# 	immediate = {
+# 		yearly_total = { RES = energy }
+# 		yearly_total = { RES = minerals }
+# 		yearly_total = { RES = food }
+# 		yearly_total = { RES = alloys }
+# 		yearly_total = { RES = consumer_goods }
+# 	}
+# }
