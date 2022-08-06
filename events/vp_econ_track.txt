@@ -1,0 +1,20 @@
+##########################
+#
+# Economy tracker events
+# Mateusz Duchnowski
+#
+##########################
+
+namespace = tracker
+
+# creates tracker variables
+country event = {
+
+	id = tracker.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+}  
