@@ -8,13 +8,25 @@
 namespace = tracker
 
 # creates tracker variables
-country event = {
+country_event = {
 
 	id = tracker.1
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
-
+		set_tracker = { RES = energy }
 	}
+	immediate = {
+		set_tracker = { RES = minerals }
+	}
+	immediate = {
+		set_tracker = { RES = food }
+	}
+	immediate = {
+		set_tracker = { RES = alloys }
+	}
+	immediate = {
+		set_tracker = { RES = consumer_goods }
+	}				
 }  
