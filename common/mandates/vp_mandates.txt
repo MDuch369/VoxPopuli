@@ -1,0 +1,25 @@
+# test mandate: gather given amount of energy resource during the ruler term
+mandate_energy= {
+	valid = {
+		exists = owner
+	}
+	parameters = {}
+
+	on_term_started = {
+		owner = {
+			start_situation = {
+				type = "mandate_energy"
+				target = this
+			}
+			# Detail event chain reward in comment here:
+			# +300 Influence
+		}
+	}
+	on_term_ended = {
+	owner = {
+		if = { limit = { is_ai = no }	log = "mandate_energy_end_of_term fired for player" }
+		if = { limit = { is_ai = yes }	log = "mandate_energy_end_of_term fired for AI" }
+		country_event = { id = mandate.2 }
+	}
+
+}
