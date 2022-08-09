@@ -24,6 +24,7 @@ update_tracker = {
 		which = $RES$_tracker
 		value = $RES$_tracker_upd
 	}
+	clear_variable = $RES$_tracker_upd
 }
 # saves tracker value and resets it
 tracker_total = {
