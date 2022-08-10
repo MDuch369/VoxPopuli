@@ -15,7 +15,7 @@ country_event = {
 	}
 }
 
-# gives rewards for mandate completion
+# informs about end of mandate 
 country_event = {
 	id = vp_mandate.2
 	title = vp_mandate.2
@@ -29,31 +29,3 @@ country_event = {
 		name = OK
 	}
 }
-# informs about failing the mandate 
-country_event = {
-	id = vp_mandate.3
-	title = vp_mandate.3
-	desc = vp_mandate.3_desc
-	picture = GFX_evt_civil_action
-	show_sound = event_assembly_fight
-
-	is_triggered_only = yes
-
-	option = {
-		name = OK
-	}
-}
-# # Mandate failed/expired
-# country_event = {
-# 	id = vp_mandate.2
-# 	title = mandate.2.title
-# 	desc = mandate.2.desc
-# 	picture = GFX_evt_civil_action
-# 	show_sound = event_assembly_fight
-
-# 	is_triggered_only = yes
-
-# 	option = {
-# 		name = OK
-# 	}
-# }
