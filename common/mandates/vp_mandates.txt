@@ -19,6 +19,7 @@ mandate_energy= {
 	owner = {
 		if = { limit = { is_ai = no }	log = "mandate_energy_end_of_term fired for player" }
 		if = { limit = { is_ai = yes }	log = "mandate_energy_end_of_term fired for AI" }
+		# destroy_situation = mandate_energy
 		country_event = { id = mandate.2 }
 	}
 
