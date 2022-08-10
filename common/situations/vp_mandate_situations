@@ -22,7 +22,10 @@
 		owner = {
 			country_event = {
 				id = vp_mandate.2
-		 	}			
+		 	}		
+			add_resource = {
+				unity = 500
+			}
 		}
  	}
 
@@ -31,7 +34,7 @@
  		destroy_situation = this							
 		owner = {
 			country_event = {
-				id = vp_mandate.3
+				id = vp_mandate.2
 		 	}			
 		}
  	}
@@ -41,7 +44,7 @@
 		destroy_situation = this
 		owner = {
 			country_event = {
-				id = vp_mandate.3
+				id = vp_mandate.2
 		 	}			
 		}
 	}						
