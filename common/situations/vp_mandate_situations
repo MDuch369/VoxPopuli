@@ -1,0 +1,104 @@
+  mandate_energy = {					
+ 	desc = { text = mandate_energy_desc triggers = { } }	
+ 	picture = GFX_evt_alien_nature 		
+ 	category = neutral
+
+ 	complete_icon = GFX_icon			
+ 	complete_icon_frame = GFX_icon_frame
+ 	fail_icon = GFX_icon				
+ 	fail_icon_frame = GFX_icon_frame
+
+	#  sets up progress variable and announces the beginning of mandate
+ 	on_start = {
+		situation_event = {
+			id = vp_mandate.100
+		}	
+		owner = {
+			country_event = {
+				id = vp_mandate.1
+		 	}			
+		}
+	}
+	# gives reward (unity, bonus to elections for nest term)
+ 	on_progress_complete = {			
+		destroy_situation = this
+		owner = {
+			country_event = {
+				id = vp_mandate.2
+		 	}		
+			add_resource = {
+				unity = 500
+			}
+		}
+ 	}
+
+	#  mandate fails when term ends before fulfilling the goal (that is next elections conclude)
+ 	on_fail = {							
+ 		destroy_situation = this							
+		owner = {
+			country_event = {
+				id = vp_mandate.2
+		 	}			
+		}
+ 	}
+
+	# checks if average res production was fullfilled if absolute production wasn't
+ 	on_abort = {
+		destroy_situation = this
+		owner = {
+			country_event = {
+				id = vp_mandate.2
+		 	}			
+		}
+	}						
+	 # mandate aborts on death of a ruler
+ 	abort_trigger = {} 					
+
+ 	start_value = 0					
+ 	progress_direction = bidirectional	
+ 	complete_category = positive		
+ 	fail_category = negative			
+
+ 	stages = { 							
+
+ 		sample_stage = { 					
+ 			icon = GFX_asset_name
+ 			background = GFX_asset_name
+ 			end = 100						
+ 		}
+ 	}
+
+ 	monthly_progress = {
+ 		base = progress							
+ 		# modifier = { 						
+ 		# 	multiply = progr_mult 
+ 		# 	desc = federation_acceptance_reduce_fleet 	
+ 		# 	<triggers>
+ 		# }
+ 	}
+
+ 	approach = {
+ 		name = approach_a 					
+ 		icon = GFX_asset_icon
+ 		icon_background = GFX_asset_icon_background
+ 		allow = { } 						
+ 		potential = { } 					
+ 		on_select = { } 					
+	
+ 		default = yes 						
+ 											
+ 		resources = { 						
+ 			category = situations
+ 			cost = { }
+ 			upkeep = { }
+ 			produces = { }
+ 		}
+ 		ai_weight = { } 					
+ 	}
+
+ 	on_monthly = { 
+ 		events = {
+			vp_mandate.100
+ 		}
+ 	}
+  }

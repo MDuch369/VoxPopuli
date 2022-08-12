@@ -1,0 +1,50 @@
+namespace = vp_mandate
+
+# announces beggining of the mandate
+country_event = {
+	id = vp_mandate.1
+	title = vp_mandate.1
+	desc = vp_mandate.1_desc
+	picture = GFX_evt_civil_action
+	show_sound = event_assembly_fight
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+# informs about end of mandate 
+country_event = {
+	id = vp_mandate.2
+	title = vp_mandate.2
+	desc = vp_mandate.2_desc
+	picture = GFX_evt_civil_action
+	show_sound = event_assembly_fight
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+situation_event = {
+	id = vp_mandate.100
+	title = vp_mandate.100
+	desc = vp_mandate.100_desc
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = progress
+			value = energy_tracker_upd 
+		}
+		divide_variable = {
+			which = progress
+			value = energy_total
+		}
+	}
+}

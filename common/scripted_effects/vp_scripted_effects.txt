@@ -1,0 +1,117 @@
+######################################
+#
+# Economy tracker Scripted Effects
+# Mateusz duchnowski
+#
+######################################
+
+set_tracker = {
+	set_variable = {
+		which = $RES$_tracker
+		value = 0
+	}
+	set_variable = {
+		which = $RES$_tracker_upd
+		value = 0
+	}
+}
+update_tracker = {
+	export_resource_income_to_variable = {
+		resource = $RES$
+		variable = $RES$_tracker_upd
+	}
+	change_variable = {
+		which = $RES$_tracker
+		value = $RES$_tracker_upd
+	}
+	clear_variable = $RES$_tracker_upd
+}
+# saves tracker value and resets it
+tracker_total = {
+	set_variable = {
+		which = $RES$_total
+		value = $RES$_tracker
+	}
+	set_variable = {
+		which = $RES$_tracker
+		value = 0
+	}
+}
+# calculates average resource production over a period of time
+tracker_avg = {
+	set_variable = {
+		which = $RES$_avg
+		value = $RES$_total
+	}
+	divide_variable = {
+		which = $RES$_total
+		value = $DIV$
+	}
+}
+
+# yearly_total = {
+# 	set_variable = {
+# 		which = $RES$_total
+# 		value = $RES$_tracker
+# 	}
+# 	set_variable = {
+# 		which = $RES$_tracker
+# 		value = 0
+# 	}
+# }
+# yearly_avg = {
+# 	set_variable = {
+# 		which = $RES$_yr_avg
+# 		value = $RES$_total
+# 	}
+# 	divide_variable ={ 
+# 		which = $RES$_yr_avg
+# 		value = 12
+# 	}
+# }
+
+# five_year_total = {
+# 	set_variable = {
+# 		which = $RES$_five_yr_total
+# 		value = $RES$_total
+# 	}
+# }
+# five_year_upd = {
+# 	change_variable = {
+# 		which = $RES$_five_yr_total
+# 		value = $RES$_total
+# 	}
+# }
+# five_year_avg = {
+# 	set_variable = {
+# 		which = $RES$_five_yr_avg
+# 		value = $RES$_five_yr_total
+# 	}
+# 	divide_variable ={ 
+# 		which = $RES$_five_yr_avg
+# 		value = 60
+# 	}
+# }
+
+# ten_year_total = {
+# 	set_variable = {
+# 		which = $RES$_ten_yr_total
+# 		value = $RES$_total
+# 	}
+# }
+# ten_year_upd = {
+# 	change_variable = {
+# 		which = $RES$_ten_yr_total
+# 		value = $RES$_total
+# 	}
+# }
+# ten_year_avg = {
+# 	set_variable = {
+# 		which = $RES$_ten_yr_avg
+# 		value = $RES$_ten_yr_total
+# 	}
+# 	divide_variable ={ 
+# 		which = $RES$_ten_yr_avg
+# 		value = 120
+# 	}
+# }

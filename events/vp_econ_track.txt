@@ -1,0 +1,56 @@
+################################
+#
+# Economy tracker events
+# Mateusz Duchnowski
+#
+################################
+
+namespace = vp_tracker
+
+# creates tracker variables
+country_event = {
+	id = vp_tracker.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		ROOT = {
+			set_tracker = { RES = energy }
+			set_tracker = { RES = minerals }
+			set_tracker = { RES = food }
+			set_tracker = { RES = alloys }
+			set_tracker = { RES = consumer_goods }
+		}
+		# ! this is only for testing purposes
+		set_variable = {
+			which = energy_total
+			value = 9500
+		}
+	}
+}  
+# updates trackers every month
+country_event = {
+	id = vp_tracker.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		ROOT = {
+			update_tracker = { RES = energy }
+			update_tracker = { RES = minerals }
+			update_tracker = { RES = food }
+			update_tracker = { RES = alloys }
+			update_tracker = { RES = consumer_goods }
+		}
+	}
+}
+
+# country_event = {
+# 	id = vp_tracker.10.
+# 	hide_window = yes
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		tracker_total = { RES = energy }
+#  	}
+# }
