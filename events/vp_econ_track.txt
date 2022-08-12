@@ -5,11 +5,11 @@
 #
 ################################
 
-namespace = tracker
+namespace = vp_tracker
 
 # creates tracker variables
 country_event = {
-	id = tracker.1
+	id = vp_tracker.1
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -30,7 +30,7 @@ country_event = {
 }  
 # updates trackers every month
 country_event = {
-	id = tracker.2
+	id = vp_tracker.2
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -46,7 +46,7 @@ country_event = {
 }
 
 # country_event = {
-# 	id = tracker.10.
+# 	id = vp_tracker.10.
 # 	hide_window = yes
 # 	is_triggered_only = yes
 
