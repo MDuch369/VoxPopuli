@@ -29,3 +29,22 @@ country_event = {
 		name = OK
 	}
 }
+situation_event = {
+	id = vp_mandate.100
+	title = vp_mandate.100
+	desc = vp_mandate.100_desc
+
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = progress
+			value = energy_tracker_upd 
+		}
+		divide_variable = {
+			which = progress
+			value = energy_total
+		}
+	}
+}

@@ -8,8 +8,11 @@
  	fail_icon = GFX_icon				
  	fail_icon_frame = GFX_icon_frame
 
-	#  announces the beginning of mandate
+	#  sets up progress variable and announces the beginning of mandate
  	on_start = {
+		situation_event = {
+			id = vp_mandate.100
+		}	
 		owner = {
 			country_event = {
 				id = vp_mandate.1
@@ -66,12 +69,12 @@
  	}
 
  	monthly_progress = {
- 		base = 1							
- 		modifier = { 						
- 			add = 2
- 			desc = federation_acceptance_reduce_fleet 	
- 			<triggers>
- 		}
+ 		base = progress							
+ 		# modifier = { 						
+ 		# 	multiply = progr_mult 
+ 		# 	desc = federation_acceptance_reduce_fleet 	
+ 		# 	<triggers>
+ 		# }
  	}
 
  	approach = {
@@ -95,6 +98,7 @@
 
  	on_monthly = { 
  		events = {
+			vp_mandate.100
  		}
  	}
   }
